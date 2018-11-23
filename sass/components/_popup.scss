@@ -10,6 +10,12 @@
     opacity: 0;
     transition: all .3s;
 
+    @supports(-webkit-backdrop-filter: blur(10xp)) or (backdrop-filter: blur(10xp)) {
+        -webkit-backdrop-filter: blur(10xp);
+        backdrop-filter: blur(10xp);
+        background-color: rgba($color-black, .3);
+    }
+
     &__content {
         @include absCenter;
         width: 75%;
